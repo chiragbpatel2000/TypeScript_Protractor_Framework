@@ -1,0 +1,20 @@
+{
+  "name": "typescriptframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chirag",
+  "license": "ISC",
+  "dependencies": {
+    "protractor": "^5.4.3",
+    "typescript": "^3.8.3",
+    "jasmine": "3.5.0",
+    "@types/jasmine": "3.5.10",
+    "@types/jasminewd2": "2.0.8",
+    "ts-node": "8.8.1",
+    "@types/node": "13.9.5"
+  }
+}
