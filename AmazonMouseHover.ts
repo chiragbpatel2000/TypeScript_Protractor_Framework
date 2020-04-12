@@ -1,4 +1,6 @@
 import {browser,element,by} from 'protractor';
+import { amazonMouseHover } from './pageObjects/amazonMouseHover.po';
+
 describe("Amazon Mouse Hover ", function(){
 
     browser.ignoreSynchronization = true;
@@ -6,17 +8,19 @@ describe("Amazon Mouse Hover ", function(){
     browser.manage().window().maximize();
 	
 	it("Amazon Mouse Hover", function(){
+
+        let amazonMouseHoverpage = new amazonMouseHover();
 		
 		// navigate to website 
         browser.get("https://www.amazon.co.uk/");
 
-        browser.actions().mouseMove(element(by.id("nav-link-accountList"))).perform();
+        browser.actions().mouseMove(amazonMouseHoverpage.accountListSection).perform();
 
         browser.sleep(3000);
 
-        element(by.id("nav_prefetch_yourorders")).getText().then(function(textprint){
+    amazonMouseHoverpage.yourOrderLink.getText().then(function(textprint){
             console.log(textprint);
-            element(by.id("nav_prefetch_yourorders")).click();
+            amazonMouseHoverpage.yourOrderLink.click();
         })
 
         browser.sleep(3000);
